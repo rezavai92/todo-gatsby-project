@@ -1,0 +1,57 @@
+.container {
+    margin: 3rem auto;
+    max-width: 600px;
+    
+  }
+
+  .taskFlex{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    
+  }
+
+  
+
+  .taskAdder{
+      text-align: center;
+  }
+
+  .tasks{
+
+    margin-top: 10%;
+  }
+
+  .completedTasks{
+    margin-top: 25%;
+   
+  }
+  
+  
+
+  
+  .completedTaskFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .completedTaskBtn{
+    text-decoration: none;
+    text-align: right;
+    display: none;
+    cursor: pointer;
+    
+  }
+
+  .completedTaskText{
+    text-decoration: line-through;
+   
+  }
+  
+  .completedTaskFlex:hover .completedTaskBtn{
+    display: block;
+  }
+  .completedTaskFlex div{
+    width: 100%;
+  }
+  
