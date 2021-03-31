@@ -12,7 +12,7 @@ const Task= (props)=>{
     const [updatedText,setUpdatedText] = useState("");
     const[updatedTime,setUpdatedTime] = useState("")
     const [willShowModal,setWillShowModal] = useState(false)
-
+    console.log(typeof(props.task.task.time) )
     useEffect(()=>{
         setUpdatedText(props.task.task.text)
         setUpdatedTime(props.task.task.time)

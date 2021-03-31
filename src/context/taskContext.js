@@ -61,8 +61,21 @@ const TaskProvider =(props)=>{
 
     }
 
+    const undoCompletedTask = (taskId)=>{
+        const existingCompletedTasks =[...completedTasks];
+        const targetTask = existingCompletedTasks.find((t)=>{
+            return t.id==taskId
+        })
+        setCompletedTasks (existingCompletedTasks.filter((t)=>{
+            return t.id!==taskId
+        }) )
+        const existingTasks = [...tasks]
+        existingTasks.push(targetTask)
+        setTasks(existingTasks)
+    
+    }
 
-    return(<taskContext.Provider value={ {createTask,cleanCompletedTasks,cleanAllCompletedTasks , editTask,deleteTask,completedTasks,tasks }}>
+    return(<taskContext.Provider value={ {createTask,cleanCompletedTasks,undoCompletedTask,cleanAllCompletedTasks , editTask,deleteTask,completedTasks,tasks }}>
         {props.children} 
     </taskContext.Provider>)
 
